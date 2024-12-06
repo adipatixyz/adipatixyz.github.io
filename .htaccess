@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect seluruh akses ke domain lain
+RewriteCond %{HTTP_HOST} ^belivpn\.my\.id$ [NC]
+RewriteRule ^(.*)$ https://gmvpn.my.id/$1 [R=301,L]
