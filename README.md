@@ -1,1 +1,0 @@
-# gmvpn.my.id
