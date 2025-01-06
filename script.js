@@ -177,7 +177,7 @@ new TypeIt("#teks1", {
 }).go();
 
 new TypeIt("#teks2", {
-  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "Jangan lihat nominalnya, tapi jangan lupa ultahku bulan april :) Link daget 1 Triliun : <a href='https://link.dana.id/ambil?c=sjksnb8up&r=dKQsdJ' target='_blank'>Klik di sini!</a>", " ", "- Wish all you the best"],
+  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "jangan lihat nominalnya, tapi lihat angkanya :) Link daget 1 Triliun : <a href='https://link.dana.id/ambil?c=sjksnb8up&r=dKQsdJ' target='_blank'>Klik di sini!</a>", " ", "- Wish all you the best"],
   startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
@@ -185,9 +185,9 @@ new TypeIt("#teks2", {
 
 
 new TypeIt("#trims", {
-  strings: ["Mbk Elpaaa, Bahagia Terus Yaaa."],
+  strings: ["Bahagia Terus Yaaa."],
   startDelay: 500,
-  speed: 200,
+  speed: 250,
   loop: false,
   waitUntilVisible: true,
 }).go();
