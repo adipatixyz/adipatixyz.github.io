@@ -177,7 +177,7 @@ new TypeIt("#teks1", {
 }).go();
 
 new TypeIt("#teks2", {
-  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "jangan lihat nominalnya, tapi lihat angkanya :) Link daget 1 Triliun : <a href='https://link.dana.id/ambil?c=sjksnb8up&r=dKQsdJ' target='_blank'>Klik di sini!</a>", " ", "- Wish all you the best"],
+  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "jangan lihat nominalnya, tapi lihat angkanya :) Link daget 1 Triliun : <a href='https://gmvpn.my.id/daget.html' target='_blank'>Klik di sini!</a>", " ", "- Wish all you the best"],
   startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
