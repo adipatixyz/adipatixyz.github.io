@@ -7,7 +7,7 @@ function playMusic() {
 }
 
 // Waktu target yang Anda tentukan
-const targetTime = moment("2025-02-26 00:00:00"); // Waktu target Anda
+const targetTime = moment("2023-02-26 00:00:00"); // Waktu target Anda
 
 window.addEventListener('DOMContentLoaded', function () {
   // Memantau waktu dan memulai musik setelah target waktu tercapai
@@ -31,7 +31,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date('Feb 26, 2025 00:00:00').getTime(),
+let countDown = new Date('Feb 26, 2023 00:00:00').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
