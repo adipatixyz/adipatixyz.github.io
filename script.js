@@ -7,7 +7,7 @@ function playMusic() {
 }
 
 // Waktu target yang Anda tentukan
-const targetTime = moment("2023-02-26 00:00:00"); // Waktu target Anda
+const targetTime = moment("2023-01-26 00:00:00"); // Waktu target Anda
 
 window.addEventListener('DOMContentLoaded', function () {
   // Memantau waktu dan memulai musik setelah target waktu tercapai
