@@ -1,12 +1,27 @@
 // Fungsi untuk memulai musik
 function playMusic() {
   const music = document.getElementById('background-music');
-  music.play();
+  music.play().catch(error => {
+    console.error("Error playing the music:", error); // Menangani error pemutaran musik
+  });
 }
+
+// Waktu target yang Anda tentukan
+const targetTime = moment("2023-02-26 00:00:00"); // Waktu target Anda
+
 window.addEventListener('DOMContentLoaded', function () {
-  playMusic();
+  // Memantau waktu dan memulai musik setelah target waktu tercapai
+  const interval = setInterval(function () {
+    const now = moment();
+
+    // Jika waktu saat ini sudah melewati waktu target
+    if (now.isAfter(targetTime)) {
+      playMusic();
+      // clearInterval(interval); // Hentikan pengecekan setelah musik diputar
+    }
+  }, 1000); // Memeriksa setiap detik
 });
-document.body.addEventListener('click', playMusic, { once: true });
+
 const content = document.getElementById('content');
 const footer = document.getElementsByTagName('footer')[0];
 const timer = document.getElementById('timer');
@@ -15,24 +30,24 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('Feb 26, 2025 00:00:00').getTime(),
+
+let countDown = new Date('Feb 26, 2023 00:00:00').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
-    document.getElementById('days').innerText = Math.floor(distance / (day)),
-      document.getElementById('hours').innerText = Math.floor(distance / (hour)),
-      document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-      document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+    document.getElementById('days').innerText = Math.floor(distance / day),
+      document.getElementById('hours').innerText = Math.floor((distance % day) / hour),
+      document.getElementById('minutes').innerText = Math.floor((distance % hour) / minute),
+      document.getElementById('seconds').innerText = Math.floor((distance % minute) / second);
 
     if (distance < 0) {
-
       timer.classList.add('d-none');
       confetti();
       clearInterval(x);
       _slideSatu();
     }
 
-  }, second)
+  }, second);
 
 const _slideSatu = function () {
   const tap = document.getElementById('tap');
@@ -42,7 +57,8 @@ const _slideSatu = function () {
     tap.classList.remove('d-none');
     document.body.addEventListener('click', function () {
       _slideDua();
-    })
+      playMusic(); // Pastikan musik diputar setelah ada interaksi pengguna
+    });
   }, 7000);
 };
 
@@ -155,13 +171,13 @@ const _slideEnam = function () {
 
 new TypeIt("#teks1", {
   strings: ["Hari ini, saya langitkan semua doa terbaik saya untuk kamu.", " ", "Semoga hal-hal yang membuat kamu runtuh turut menjadi alasan kamu untuk tetap tumbuh.", " ", "Semoga dunia senantiasa menjaga kamu dimanapun kamu berada.", " ", "Semoga hari-hari kamu selalu diiringi cinta yang tak pernah ada batasnya.", " ", "Semoga setiap langkahmu dimudahkan hingga tercapai apa yang kamu inginkan."],
-  startDelay: 4000,
+  startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
 }).go();
 
 new TypeIt("#teks2", {
-  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "- Wish all you the best"],
+  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "Jangan lihat nominalnya, tapi jangan lupa ultahku bulan april :) Link daget 1 Triliun : <a href='https://link.dana.id/ambil?c=sjksnb8up&r=dKQsdJ' target='_blank'>Klik di sini!</a>", " ", "- Wish all you the best"],
   startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
@@ -169,9 +185,9 @@ new TypeIt("#teks2", {
 
 
 new TypeIt("#trims", {
-  strings: ["Terimakasih."],
-  startDelay: 2000,
-  speed: 150,
+  strings: ["Mbk Elpaaa, Bahagia Terus Yaaa."],
+  startDelay: 500,
+  speed: 200,
   loop: false,
   waitUntilVisible: true,
 }).go();
